@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/allCountries">allCountries</a>
+      <a href="/records">records</a>
+    </nav>
+    <p>TotalConfirmed :<%= worldData.TotalConfirmed %></p>
+    <p>TotalDeaths : <%= worldData.TotalDeaths %></p>
+    <p>TotalRecovered :<%= worldData.TotalRecovered %></p>
+
+    <form action="/searchResult" method="GET">
+      <input type="text" name="country" placeholder="search for country" />
+      <input type="date" name="from" />
+      <input type="date" name="to" />
+      <button>search</button>
+    </form>
+  </body>
+</html>

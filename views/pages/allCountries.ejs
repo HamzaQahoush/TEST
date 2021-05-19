@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="wvalueth=device-width, initial-scale=1.0" />
+    <title>allCountries</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/records">records</a>
+    </nav>
+
+    <section>
+      <% allCountriesData.forEach(country=>{ %>
+
+      <p>country :<%=country.country %></p>
+      <p>TotalConfirmed :<%=country.totalConfirmed %></p>
+      <p>TotalDeaths: <%=country.totalDeaths %></p>
+      <p>TotalRecovered :<%=country.totalRecovered %></p>
+      <p>date: <%=country.date %></p>
+
+      <form action="/records" method="POST">
+        <input type="hidden" name="country" value="<%=country.country %>" />
+        <input
+          type="hidden"
+          name="confirmedCases"
+          value="<%=country.totalConfirmed %>"
+        />
+        <input
+          type="hidden"
+          name="totalDeaths"
+          value="<%=country.totalDeaths %>"
+        />
+        <input
+          type="hidden"
+          name="totalRecovered"
+          value="<%=country.totalRecovered %>"
+        />
+        <input type="hidden" name="date" value="<%=country.date %>" />
+
+        <button>add</button>
+      </form>
+
+      <% }) %>
+    </section>
+  </body>
+</html>

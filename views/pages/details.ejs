@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>details</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/records">records</a>
+    </nav>
+    <ul>
+      <li><%= dataSelected.country %></li>
+      <li><%=dataSelected.confirmedCases %></li>
+      <li><%=dataSelected.totalDeaths %></li>
+      <li><%=dataSelected.totalRecovered %></li>
+      <li><%=dataSelected.date %></li>
+      <form action="/delete/<%=dataSelected.id%>?_method=delete" method="POST">
+        <button>Delete</button>
+      </form>
+    </ul>
+  </body>
+</html>

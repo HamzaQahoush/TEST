@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS;
+CREATE TABLE IF NOT EXISTS covid(
+id SERIAL PRIMARY KEY,
+country VARCHAR(255),
+confirmedCases VARCHAR(255),
+totalDeaths VARCHAR(255),
+totalRecovered VARCHAR(255),
+date VARCHAR(255)
+);
